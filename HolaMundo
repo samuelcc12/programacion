@@ -69,6 +69,147 @@ Proceso sin_titulo
 FinProceso
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Proceso sin_titulo
+	Escribir "AREA DEL CUADRADO"
+	Escribir "INSERTAR LADO: "
+	Leer L
+	AREA<-L*L
+	Escribir "AREA:" 
+	Escribir AREA
+FinProceso
 
+SubProceso SinTitulo
+FinSubProceso
 	
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Proceso sin_titulo
+	Escribir "AREA DEL CIRCULO"
+	Escribir "INSERTAR RADIO: "
+	Leer R
+	AREA<-R*R*3.1416
+	Escribir "AREA:" 
+	Escribir AREA
+FinProceso
+
+SubProceso SinTitulo
+FinSubProceso
+´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´
+
+Proceso sin_titulo
+	Escribir "AREA DEL CIRCULO"
+	Escribir "INSERTAR BASE: "
+	Leer B
+	Escribir "INSERTAR ALTURA: "
+	Leer H
+	AREA<-B*H
+	Escribir "AREA:" 
+	Escribir AREA
+FinProceso
+
+SubProceso SinTitulo
+FinSubProceso
+
+``````````````````````````````````````````````````````````````````````````````````````````````````````
+
+// SAMUEL.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <math.h>
+
+using namespace std;
+
+
+
+void main()
+{
+	float area,b,h;
+	cout<<"AREA DEL TRIANGULO";
+	cout<<"Insertar base: ";
+	cin>>b;
+	cout<<"Insertar altura:";
+	cin>>h;
+	area=(b*h)/2;
+	cout<<"Area: "<<area;
+
+	getch();
+}
+```````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+
+// SAMUEL.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <math.h>
+
+using namespace std;
+
+
+
+void main()
+{
+	float area,b,h;
+	cout<<"AREA DEL PARALELOGRAMO";
+	cout<<"Insertar base: ";
+	cin>>b;
+	cout<<"Insertar altura:";
+	cin>>h;
+	area=(b*h);
+	cout<<"Area: "<<area;
+
+	getch();
+}
+````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+// SAMUEL.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <math.h>
+
+using namespace std;
+
+
+
+void main()
+{
+	float area,l;
+	cout<<"AREA DEL CUADRADO";
+	cout<<"Insertar lado: ";
+	cin>>l;
+	area=(l*l);
+	cout<<"Area: "<<area;
+
+	getch();
+}
+
+``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+// SAMUEL.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <math.h>
+
+using namespace std;
+
+
+
+void main()
+{
+	float area,R;
+	cout<<"AREA DEL CIRCULO";
+	cout<<"Insertar lado: ";
+	cin>>R;
+	area=(R*R*3.1416);
+	cout<<"Area: "<<area;
+
+	getch();
+}
+
