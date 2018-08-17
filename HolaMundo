@@ -18,3 +18,10 @@ Proceso holamundo
 	Escribir "HolaMundo"
 	
 FinProceso
+Algoritmo HOLAMUNDO
+	Escribir "BOLIVIANOS EL HADO PROPICIO"
+	Escribir "CORONO NUESTROS VOTOS Y ANHELOS"
+	Escribir "ES YA LIBRE, ES YA LIBRE ESTE SUELO"
+	Escribir "YA CESÓ SU SERVIL CONDICION"
+	Escribir "100 PUNTOS"
+FinAlgoritmo
