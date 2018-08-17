@@ -14,10 +14,17 @@ void main()
 	cout<<"Soy Samuel";
 	getch();
 }
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
 Proceso holamundo
 	Escribir "HolaMundo"
 	
 FinProceso
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
 Algoritmo HOLAMUNDO
 	Escribir "BOLIVIANOS EL HADO PROPICIO"
 	Escribir "CORONO NUESTROS VOTOS Y ANHELOS"
@@ -25,3 +32,43 @@ Algoritmo HOLAMUNDO
 	Escribir "YA CESÓ SU SERVIL CONDICION"
 	Escribir "100 PUNTOS"
 FinAlgoritmo
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h" 
+
+using namespace std;
+
+
+void main()
+{
+	
+	cout<<"Hola Mundo"<<endl;
+	cout<<"Soy Samuel";
+
+
+	cout<<"BOLIVIANOS EL HADO PROPICIO"<<endl;
+	cout<<"CORONO NUESTROS VOTOS Y ANHELOS"<<endl;
+	cout<<"ES YA LIBRE, ES YA LIBRE ESTE SUELO"<<endl;
+	cout<<"YA CESÓ SU SERVIL CONDICION"<<endl;
+	cout<<"100 PUNTOS"<<
+	getch();
+}
+``````````````````````````````````````````````````````````````````````````````````````````````````
+Proceso sin_titulo
+	Escribir "AREA DEL TRIANGULO"
+	Escribir "Insertar base: "
+	Leer b
+	Escribir "insertar altura: "
+	Leer h
+	Escribir "Area del Triangulo"
+	area<-(b*h)/2
+	Escribir area
+FinProceso
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+	
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
