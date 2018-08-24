@@ -1,0 +1,38 @@
+C++
+// SAMUEL.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include <math.h>
+
+using namespace std;
+
+
+
+void main()
+{
+	float area,b,h;
+	cout<<"AREA DEL TRIANGULO";
+	cout<<"Insertar base: ";
+	cin>>b;
+	cout<<"Insertar altura:";
+	cin>>h;
+	area=(b*h)/2;
+	cout<<"Area: "<<area;
+
+	getch();
+}
+--------------------------------------------------------------------------------
+PSEUDOCODIGO
+Proceso sin_titulo
+	Escribir "AREA DEL TRIANGULO"
+	Escribir "Insertar base: "
+	Leer b
+	Escribir "insertar altura: "
+	Leer h
+	Escribir "Area del Triangulo"
+	area<-(b*h)/2
+	Escribir area
+FinProceso
