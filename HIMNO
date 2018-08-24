@@ -1,7 +1,32 @@
-Algoritmo HOLAMUNDO
+C++
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h" 
+
+using namespace std;
+
+
+void main()
+{
+	
+	cout<<"Hola Mundo"<<endl;
+	cout<<"Soy Samuel";
+
+
+	cout<<"BOLIVIANOS EL HADO PROPICIO"<<endl;
+	cout<<"CORONO NUESTROS VOTOS Y ANHELOS"<<endl;
+	cout<<"ES YA LIBRE, ES YA LIBRE ESTE SUELO"<<endl;
+	cout<<"YA CESÓ SU SERVIL CONDICION"<<endl;
+	cout<<"100 PUNTOS"<<
+	getch();
+}
+-------------------------------------------------------------------------------
+PSEUDOCODIGO
+Algoritmo HIMNO
 	Escribir "BOLIVIANOS EL HADO PROPICIO"
 	Escribir "CORONO NUESTROS VOTOS Y ANHELOS"
 	Escribir "ES YA LIBRE, ES YA LIBRE ESTE SUELO"
 	Escribir "YA CESÓ SU SERVIL CONDICION"
 	Escribir "100 PUNTOS"
 FinAlgoritmo
+------------------------------------------------------------------
