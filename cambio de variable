@@ -1,0 +1,77 @@
+INTERCAMBIO DE VARIABLE
+C++
+
+// tarea 1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main()
+{
+	float a,b,c;
+	cout<<"Este programa tiene la funcion de intercambiar el valor de dos varibles dadas por el usuario";
+	cout<<"introducir la variable a: ";
+	cin>>a;
+	cout<<"escribir el valor de la variable b: ";
+	cin>>b;
+	c=a;
+	a=b;
+	b=c;
+	cout<<"el nuevo valor de a es: "<<a<<endl;
+	cout<<"el nuevo valor de b es: "<<b<<endl;
+	getch();
+}
+---------------------------------------------------------------------------------------------------------------------------
+INTERCAMBIO DE VARIABLE
+PSEUDOCODIGO
+Proceso cambiodevariable
+	Escribir "este programa tiene la funcion de intercambiar variables"
+	Leer a
+	Leer b
+	aux<-a
+	a<-b
+	b<-aux
+	Escribir "el valor de a es: ",a
+	Escribir "el valor de b es: " ,b
+FinProceso
+
+---------------------------------------------------------------------------------------------------------------------------
+ENCONTRAR EL PERIMETRO Y AREA DE UNA CIRCUNFERENCIA
+C++
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main()
+{
+	float A,P,r,pi=3.1416;
+	cout<<"Este programa tiene la funcion de hallar el Area y el Perimetro de una circunferencia con radio r";
+	cout<<"introducir el Radio: ";
+	cin>>r;
+	A=pi*r*r;
+	cout<<"el valor de Area es de: "<<A<<endl;
+	P=2*pi*r;
+	cout<<"el Perimetro es : "<<P<<endl;
+	getch();
+}
+--------------------------------------------------------------------------------------------------------------------------------
+ENCONTRAR EL PERIMETRO Y AREA DE UNA CIRCUNFERENCIA
+PSEUDOCODIGO
+Proceso sin_titulo
+	Escribir "este programa tiene la funcion de hallar el area y el perimetro de una circunferencia"
+	Escribir "Introducir el radio: "
+	Leer r
+	A<-3.1416*r*r
+	P<-2*3.1416*r
+	Escribir "el Area es: ",A
+	Escribir "el Perimetro es: " ,P
+FinProceso
+--------------------------------------------------------------------------------------------------------------------------------
