@@ -1,0 +1,51 @@
+C++
+// tarea 1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main()
+{
+	float x1,x2,prom;
+	cout<<"introducir primer nota: ";
+	cin>>x1;
+	cout<<"introducir segunda nota: ";
+	cin>>x2;
+	x2=x1+x2;
+	cout<<"introducir tercer nota: ";
+	cin>>x1;
+	x2=x1+x2;
+	cout<<"introducir cuarta nota: ";
+	cin>>x1;
+	x2=x1+x2;
+	cout<<"introducir quinta nota: ";
+	cin>>x1;
+	prom=(x1+x2)/5;
+	cout<<"el promedio es: "<<prom<<endl;
+	getch();
+}
+------------------------------------------------------------------------------------------------------------------------
+PSEUDOCODIGO
+Proceso distancia
+	Escribir 'este programa tiene la funcion de hallar el promedio de 5 notas'
+	Escribir 'Introducir primer nota: '
+	Leer a
+	Escribir "Intoducir segunda nota: "
+	Leer b
+	a<-b+a
+	Escribir "introducir tercer nota"
+	Leer b
+	a<-b+a
+	Escribir "introducir cuarta nota"
+	Leer b
+	a<-b+a
+	Escribir "introducir quinta nota"
+	Leer b
+	prom<-(a+b)/5
+	Escribir "el promedio es: ", prom
+FinProceso
