@@ -1,0 +1,42 @@
+DISTANCIA ENTRE DOS PUNTOS
+C++
+// tarea 1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main()
+{
+	float x1,x2,y1,y2,D;
+	cout<<"introducir x1: ";
+	cin>>x1;
+	cout<<"introducir y1: ";
+	cin>>y1;
+	cout<<"introducir x2: ";
+	cin>>x2;
+	cout<<"introducir y2";
+	cin>>y2;
+	D=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+	cout<<"La distancia entre los puntos es: "<<D<<endl;
+	getch();
+}
+-----------------------------------------------------------------------------------------------------------------
+PSEUDOCODIGO
+Proceso distancia
+	Escribir 'este programa tiene la funcion de hallar la distancia entre dos puntos dados por el usuario'
+	Escribir 'Introducir x1: '
+	Leer x1
+	Escribir "Intoducir y1: "
+	Leer y1
+	Escribir "introducir x2"
+	Leer x2
+	Escribir "Introducir y2: "
+	Leer y2
+	D<-raiz((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1))
+	Escribir "la distancia es: ", D
+FinProceso
