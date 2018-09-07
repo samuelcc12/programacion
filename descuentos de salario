@@ -1,0 +1,26 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+#include "math.h"
+
+using namespace std;
+ void main()
+ {
+float salariobruto,numero,totalpagar,salariomin=2060,salarioneto;
+totalpagar=0;
+cout<<"ingrese salario bruto: ";
+cin>>salariobruto;
+while (salariobruto!=-999)
+{
+	if (salariobruto>(4*salariomin))
+		salarioneto=salariobruto-(salariobruto*0.13);
+	else
+		salarioneto=salariobruto-(salariobruto*0.12);
+	cout<<"el salario neto es: "<<salarioneto<<endl;
+	totalpagar=totalpagar+salarioneto;
+	cout<<"ingrese salario bruto: ";
+	cin>>salariobruto;
+}
+cout<<"el total a pagar es: "<<totalpagar<<endl;
+getch ();
+ }
