@@ -1,0 +1,31 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+void main()
+{
+	float a,b,c,discriminante,x1,x2,l;
+cout<<"insertar los terminos de la ecuacion cuadratica (a,b,c): ";
+cin>>a>>b>>c;
+discriminante=sqrt((b*b)-(4*a*c));
+if(discriminante==0){
+	x1=-b/(2*a);
+	x2=x1;
+	cout<<"la solucion es unica"<<endl;
+}
+else
+	{if (discriminante>0){
+		x1=(-b+discriminante)/(2*a);
+		x2=(-b-discriminante)/(2*a);
+		cout<<"la soluciones son multiples"<<endl;
+}
+	else
+	{cout<<"x es un numero imaginario"<<endl;}
+}
+cout<<"el valor de x1 es: "<<x1<<endl;
+cout<<"el valor de x2 es: "<<x2;
+
+getch();
+}
