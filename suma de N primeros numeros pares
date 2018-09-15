@@ -1,0 +1,25 @@
+// samuel.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+void main()
+{
+    int N,numpar=2,suma=0,cont=1;
+	cout<<"determinar la suma de los primeros N numeros pares"<<endl;
+	cout<<"ingresar N: ";
+	cin>>N;
+	cout<<endl;
+	while (N>=cont)
+	{
+		cont=cont+1;
+		suma=suma+numpar;
+		numpar=numpar+2;
+	}
+	cout<<"el resultado de la suma es: "<<suma<<endl;
+	getch ();
+}
