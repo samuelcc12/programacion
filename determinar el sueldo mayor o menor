@@ -1,0 +1,33 @@
+C++
+
+// samuel.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+void main()
+{
+    int sueldo,empleados,num=1,mayor=-999,menor=99999999;
+	cout<<"el programa calcula el sueldo mayor y menor de una cantidad de empleados"<<endl;
+	cout<<"ingresar el numero de empleados: ";
+	cin>>empleados;
+	cout<<endl;
+	while (num<=empleados)
+	{
+	cout<<"ingresar sueldo "<<num<<":";
+	cin>>sueldo;
+	cout<<endl;
+		if (sueldo>mayor)
+		{mayor=sueldo;}
+		if (sueldo<menor)
+		{menor=sueldo;}
+	num=num+1;
+	}
+	cout<<"el sueldo mayor es: "<<mayor<<endl;
+	cout<<"el sueldo menor es: "<<menor<<endl;
+	getch ();
+}
