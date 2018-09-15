@@ -1,0 +1,50 @@
+C++
+
+
+
+// samuel.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+void main()
+{
+    int edad,a,n;
+    cout<<"determinar si se puede votar en las elecciones"<<endl;
+    cout<<"ingresar edad: ";
+    cin>>edad;
+    while(edad!=-999)
+    {if (edad>=18)
+    {cout<<"¿tiene antecedentes?"<<endl;
+    cout<<"0.- no"<<endl;
+    cout<<"1.- si"<<endl;
+    cin>>a;
+    if (a==0)
+    {
+        cout<<"¿tiene nacionalidad boliviana?"<<endl;
+        cout<<"0.- no"<<endl;
+        cout<<"1.- su"<<endl;
+        cin>>n;
+		if (n==0)
+		{
+				cout<<"solo se le permite votar en elecciones municipales"<<endl;
+		}
+		if (n==1)
+		{
+			cout<<"permitido para botar en elecciones presidenciales y municipales"<<endl;
+		}
+	}
+	if (a==1)
+	{
+		cout<<"no puede participar en las elecciones"<<endl;
+	}
+	}
+	cout<<"ingrese edad: "<<endl;
+	cin>>edad;
+	}
+	getch ();
+}
