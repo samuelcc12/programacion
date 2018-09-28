@@ -1,0 +1,54 @@
+// reales.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+//prototipos
+float discriminante (float a1, float b1, float c1);
+void reales (float a, float b, float c, float &x1, float &x2);
+void valorunico(float a, float b, float c);
+//& son variables por referencia, es decir, que cambian de valor en la funcion por que son punteros a las variables
+
+void main()
+{
+	float a, b, c, valor1, valor2, d, unico;
+	cout<<"ingrese los valores de a, b, c: ";
+	cin>>a>>b>>c;
+	cout<<endl;
+	d=discriminante(a,b,c);
+	if (d>0)
+	{
+		reales(a,b,c,valor1,valor2); //cuando la funcion no devuelve nada - void
+		cout<<"raiz 1: "<<valor1<<endl;
+		cout<<"raiz 2: "<<valor2<<endl;
+	}
+	else
+	if (d==0)
+	{
+		unico=valorunico(a, b, c);
+		cout<<"el valor unico de la raiz es: "<<unico<<endl;
+	}
+	else
+		cout<<"son imaginarios";
+	getch();
+}
+float discriminante (float a1, float b1, float c1)
+{
+	float d;
+	d=(b1*b1)-(4*a1*c1);
+	return d;
+}
+void reales (float a, float b, float c, float &x1, float &x2)
+{
+	float valor1,valor2;
+	x1=(-b+sqrt((b*b)-(4*a*c)))/2*a;
+	x2=(-b-sqrt((b*b)-(4*a*c)))/2*a;
+}
+void valorunico (float a, float b, float c)
+{
+	float unico;
+	unico=-b/(2*a);
+}
