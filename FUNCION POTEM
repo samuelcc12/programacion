@@ -1,0 +1,11 @@
+float POTEM(float base, int exponente)
+{
+	float funcion1=1;
+	int contador=1;
+	while(contador<=exponente)
+	{
+	funcion1=funcion1*base;
+	contador=contador+1;
+	}
+	return funcion1;
+}
