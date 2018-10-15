@@ -1,0 +1,9 @@
+int FACT (int numero)
+{
+	int funcion2=1, contador=1;
+	while (contador<=numero)
+	{
+		funcion2=funcion2*contador;
+		contador=contador+1;
+	}
+return funcion2;
