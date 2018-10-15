@@ -1,0 +1,57 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+//	Construir un programa, que mediante funciones, para hallar la suma de la siguiente serie, dados X y N enteros positivos:
+
+//          x1         x2         x3        x4                 xN
+//S  =           +          +          +          + . . . + 
+//          1!        2!          3!        4!                 N!
+
+float exponencial (float base, int exponente);
+int factorial (int numero);
+
+float main()
+
+{
+	int repeticiones, contador, contante;
+	float suma;
+	suma=0;
+	contador=1;
+	cout<<"ingrese el numero de repeticiones: ";
+	cin>>repeticiones;
+	cout<<endl;
+	cout<<"ingrese su contante: ";
+	cin>>contante;
+	cout<<endl;
+	while (contador<=repeticiones)
+	{
+		suma=suma+(exponencial(contante, contador)/factorial(contador));
+		contador=contador+1;
+	}
+	cout<<"el resultado de las repeticiones es: "<<suma<<endl;
+	getch();
+}
+float exponencial(float base, int exponente)
+{
+	float funcion1=1;
+	int contador=1;
+	while(contador<=exponente)
+	{
+	funcion1=funcion1*base;
+	contador=contador+1;
+	}
+	return funcion1;
+}
+int factorial (int numero)
+{
+	int funcion2=1, contador=1;
+	while (contador<=numero)
+	{
+		funcion2=funcion2*contador;
+		contador=contador+1;
+	}
+return funcion2;
+}
