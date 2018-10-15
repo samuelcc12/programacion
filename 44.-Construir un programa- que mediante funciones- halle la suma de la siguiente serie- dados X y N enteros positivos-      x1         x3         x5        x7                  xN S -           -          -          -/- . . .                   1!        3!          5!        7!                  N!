@@ -1,0 +1,70 @@
+4.	Construir un programa, que mediante funciones, halle la suma de la siguiente serie, dados X y N enteros positivos:
+
+         x1         x3         x5        x7                  xN
+S =           -          +          -          +/- . . .  
+         1!        3!          5!        7!                  N!
+
+
+// prtocolo 01.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+//	Construir un programa, que mediante funciones, para hallar la suma de la siguiente serie, dados X y N enteros positivos:
+
+//          x1         x3         x5        x7                  xN
+//S  =           -          +          -          + . . . -+ 
+//          1!         3!         5!        7!                   N!
+
+float exponencial (float base, int exponente);
+int factorial (int numero);
+
+float main()
+
+{
+	int repeticiones, contador, contante;
+	float suma;
+	suma=0;
+	contador=1;
+	cout<<"ingrese el numero de repeticiones: ";
+	cin>>repeticiones;
+	cout<<endl;
+	cout<<"ingrese su contante: ";
+	cin>>contante;
+	cout<<endl;
+	int intercalador=1, operador=1;
+	while (contador<=repeticiones)
+	{
+		suma=suma+(exponencial(contante, operador)/factorial(operador))*intercalador;
+		contador=contador+1;
+		operador=operador+2;
+		intercalador=intercalador*(-1);
+	}
+	cout<<"el resultado de las repeticiones es: "<<suma<<endl;
+	getch();
+}
+float exponencial(float base, int exponente)
+{
+	float funcion1=1;
+	int contador=1;
+	while(contador<=exponente)
+	{
+	funcion1=funcion1*base;
+	contador=contador+1;
+	}
+	return funcion1;
+}
+int factorial (int numero)
+{
+	int funcion2=1, contador=1;
+	while (contador<=numero)
+	{
+		funcion2=funcion2*contador;
+		contador=contador+1;
+	}
+return funcion2;
+}
