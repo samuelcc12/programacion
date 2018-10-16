@@ -1,0 +1,38 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void SISTEMA (float A, float B, float C, float D, float E, float F,float &x, float &y);
+
+void main()
+{
+	float a, b, c, d ,e, f, m, n;
+	cout<<"El siguiente programa resuelve un sistema de ecuaciones del tipo: "<<endl;
+	cout<<"          Ax+By+C=0"<<endl;
+	cout<<"          Dx+Ey+F=0"<<endl;
+	cout<<"introduzca las contante de la primera ecuacion (A, B, C): ";
+	cin>>a;cin>>b;cin>>c;
+	cout<<endl;
+	cout<<"introdusca los valores de la segunda ecuacion (D, E, F): ";
+	cin>>d;cin>>e;cin>>f;
+	cout<<endl;
+	SISTEMA( a, b, c, d, e, f, m, n);
+	cout<<"el valor de x es: "<<m<<endl;
+	cout<<"el valor de y es: "<<n<<endl;
+	getch();
+}
+
+
+
+void SISTEMA (float A, float B, float C, float D, float E, float F,float &x, float &y)
+{
+	float x, y;
+	y=((F*A-C*D)/(B*D-E*A));
+	x=((-B*y-C)/A);
+	getch();
+}
+
