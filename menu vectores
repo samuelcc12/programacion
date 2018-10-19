@@ -1,0 +1,87 @@
+// chapaco.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+#include "stdlib.h"
+
+using namespace std;
+
+void cargar(int vec[],int tam);
+void ordenar(int vec[],int tam);
+void mostrar(int vec[],int tam);
+
+
+void main()
+{
+	int n, vec[MAX], opcion;
+	do { 
+		cout<< "Ingrese el numero de elementos del vector: ";
+	    cin>> n;
+	} while ((n>MAX) ||(n<0));
+
+		do{
+	cout<<"-----MENU-----"<<endl;
+
+	cout<<"1. CARGAR"<<endl;
+	cout<<"2. ORDENAR"<<endl;
+	cout<<"3. MOSTRAR"<<endl;
+	cout<<"0. SALIR"<<endl;
+	cin>>opcion;
+	cout<<endl;
+	cout<<endl;
+		
+	switch (opcion)
+	{
+	case 1:cargar(vec,n);break;
+	case 2:ordenar(vec,n);break;
+	case 3:mostrar(vec,n);break;
+	case 0:cout<<"SALIR"<<endl;break;
+	default:cout<<"no seas upa"<<endl;break;
+	}
+		system("cls");
+		}while (opcion=!0);
+	getch();
+
+
+}
+
+
+void cargar(int vec[],int tam)
+{
+	for(int i=0;i<tam;i++)
+	{
+		
+		cout<< "Ingrese el valor para vec["<< i << "]=";
+		cin>> vec[i];
+	}
+}
+void ordenar(int vec[],int tam)
+{
+	int aux;
+	for (int i=0;i<tam-1;i++)
+	{
+		for(int j=i+1;j<tam;j++)
+		{
+			if(vec[i]>vec[j]) 
+			{
+				aux=vec[j];
+				vec[j]=vec[i];
+				vec[i]=aux;
+			}
+		}
+	}
+}
+
+void mostrar(int vec[],int tam)
+{   
+	for(int i=0;i<tam;i++)
+	{
+		cout<< "vec["<< i << "]=";
+		cout<< vec[i]<<endl;
+	}
+	getch();
+}
+
