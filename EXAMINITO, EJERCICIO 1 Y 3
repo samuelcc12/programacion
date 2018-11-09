@@ -1,0 +1,66 @@
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+void cargar     ( int tamano, double dato []); 
+void arreglo    ( int tamano, double dato []);
+void partidario ( int tamano, double dato []);
+void main()
+{
+	int tamano;
+	double dato [MAX];
+	cout<<"Ingrese el tamaño de su vector: ";
+	cin>>tamano;
+	cargar (tamano, dato);
+	arreglo (tamano, dato);
+	partidario (tamano, dato);
+
+	getch;
+}
+
+void cargar( int tamano, double dato [])
+{
+	for (int i=0; i<=tamano; i++)
+	{
+		cout<<"ingrese el dato "<<i<<": ";
+		cin>>dato[i];
+		cout<<endl;
+	}
+}
+
+void arreglo ( int tamano, double dato [])
+{
+	int x, n=1, contador=1;
+	cout<<"Que numero desea ver si se repite?"<<endl;
+	cin>>x;
+	cout<<endl;
+	for (int i=0; i<=tamano; i++)
+	{
+		if (x==dato [i])
+			cout<<"el valor se encuentra en la posicion: "<<i<<endl;
+	}
+	getch;
+}
+void partidario ( int tamano, double dato [])
+{
+	int s=1, i=0;
+	bool resp=true;
+	for (i; i<=tamano; i=i+2)
+	{
+		for (s;s<=tamano;s=s+2)
+		{
+			if (dato [i]<dato[s])
+			{resp=false;}
+			
+		}
+
+	}
+	if (resp==false)
+		cout<<"---NO ES PARTIDARIO---"<<endl;
+	if(resp==true)
+	cout<<"---ES PARTIDARIO---"<<endl;
+	getch();
+}
