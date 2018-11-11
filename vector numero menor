@@ -1,0 +1,43 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+#include <string>
+using namespace std;
+void cargarvector( double dato[], int tamano);
+void minimo     ( double dato[], int tamano);
+void mostrar     ( double dato[], int tamano);
+void arreglo     ( double dato[], int tamano);
+
+void main()
+{
+	int tamano, opcion;
+	double dato[MAX];
+	cout<<"INGRESAR EL TAMANO DEL VECTOR: ";
+	cin>>tamano;
+	cout<<endl;
+	cargarvector (dato, tamano);
+	minimo (dato, tamano);
+	getch;
+}
+
+void cargarvector( double dato[], int tamano)
+{
+	for( int i=1; i<=tamano; i++)
+	{
+		cout<<"ingresar el dato del vector "<<i<<": ";
+		cin>>dato[i];
+	}
+}
+void minimo( double dato[], int tamano)
+{
+	float minimo=99999999;
+	for (int i=1; i<=tamano; i++)
+	{
+		if (minimo>dato[i])
+			minimo=dato[i];
+	}
+	cout<<"EL VALOR MAS PEQUEÑO ES: "<<minimo<<endl;
+	getch();
+
+}
