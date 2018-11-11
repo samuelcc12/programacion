@@ -1,0 +1,41 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+#include <string>
+using namespace std;
+void cargarvector (double dato[], int tamano);
+void promedio     (double dato[], int tamano);
+
+void main()
+{
+	int tamano, opcion;
+	double dato[MAX];
+	cout<<"INGRESAR EL TAMANO DEL VECTOR: ";
+	cin>>tamano;
+	cout<<endl;
+	cargarvector (dato, tamano);
+	promedio (dato, tamano);
+	getch;
+}
+
+void cargarvector( double dato[], int tamano)
+{
+	for( int i=1; i<=tamano; i++)
+	{
+		cout<<"ingresar el dato del vector "<<i<<": ";
+		cin>>dato[i];
+	}
+}
+void promedio( double dato[], int tamano)
+{
+	float promedio;
+	for (int i=1; i<=tamano;i++)
+	{
+		if (i==1)
+			promedio=dato[1];
+		else promedio=(promedio+dato[i])/2;
+	}
+	cout<<"el promedio es: "<<promedio<<endl;
+	getch ();
+}
