@@ -1,0 +1,117 @@
+// matriz transpuesta.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+#define fila 20
+#define col 20
+
+using namespace std;
+void cargarmatriz (double matrix [fila][col], int f, int c);
+void mostrar      (double matrix [fila][col], int f, int c);
+void transpuesta  (double matrix [fila][col], int f, int c);
+int mayor         (double matrix [fila][col], int f, int c);
+void clasificar(double matrix [fila][col], int f, int c);
+void resta (double matrix [fila][col], int f, int c);
+
+void main ()
+{
+	int f, c, opcion, resp;
+	double matrix [fila][col];	
+	
+	cout<<"ingrese el numero de filas y columnas"<<endl;
+	cin>>f>>c;
+	do {
+	cout<<endl;
+	cout<<"---MENU----"<<endl;
+	cout<<endl;
+	cout<<"1. cargar "<<endl;
+	cout<<"2. mostrar "<<endl;
+	cout<<"3. mayor "<<endl;
+	cout<<"4. clasificar "<<endl;
+	cout<<"5. restar"<<endl;
+	cout<<"0. salir "<<endl;
+	cin>>opcion;
+	switch (opcion)
+	{
+		case 1: cargarmatriz (matrix , f, c); break;
+		case 2: mostrar (matrix , f, c);break;
+		case 3: resp=mayor (matrix , f, c);
+			    cout<<"matriz mayor: ";
+			    cout<<resp<<endl;break;
+		case 4: clasificar (matrix , f, c);break;
+		case 5: resta (matrix , f, c);break;
+	}
+	}
+	while (opcion!=0);
+	getch();
+}
+void cargarmatriz (double matrix [fila][col], int f, int c)
+{
+	for (int i=0;i<f;i++)
+	{
+		for (int j=0;j<c;j++)
+		{
+			cout<<"ingresar el elemento "<<i<<","<<j<<": ";
+			cin>>matrix[i][j];
+			cout<<endl;
+		}
+	}
+}
+void mostrar (double matrix [fila][col], int f, int c)
+{
+	for (int i=0;i<f;i++)
+	{
+		for (int j=0;j<c;j++)
+		{
+			cout<<"elemento: "<<i<<","<<j<<": ";
+			cout<<matrix[i][j]<<endl;
+		}
+	}
+}
+int mayor(double matrix [fila][col], int f, int c)
+{
+	int may=matrix[0][0];
+	for(int i=0;i<f;i++)
+		for(int j=0;j<c;j++)
+			if(matrix[i][j]>may)
+				may=matrix[i][j];
+return may;
+}
+
+void clasificar(double matrix [fila][col], int f, int c)
+{
+	double aux;
+	for(int i=0;i<f;i++)
+	{
+		for (int j=0;j<c;j++)
+		{
+			for (int k=0;k<c;k++)
+			{
+				if (matrix [i][j]<matrix[i][k])
+				{
+					aux=matrix[i][j];
+					matrix[i][j]=matrix[i][k];
+					matrix[i][k]=aux;
+				}
+			}
+		}
+	}
+}
+
+void resta (double matrix [fila][col], int f, int c)
+{
+	double restar [fila][col], respuesta [fila][col];
+	cout<<"ingrese la matriz con la que desea restar: ";
+	cargarmatriz (restar, f, c);
+	for (int i=0;i<f;i++)
+	{
+		for (int j=0;j<c;j++)
+		{
+			respuesta [i][j]=matrix[i][j]-restar[i][j];
+		}
+	}
+mostrar (respuesta, f, c);
+}
